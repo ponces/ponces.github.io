@@ -1,0 +1,40 @@
+{
+  "optionOk": "OK",
+  "optionCancel": "CANCELAR",
+  "optionYes": "SIM",
+  "optionNo": "NÃO",
+  "aboutWidget": {
+    "widgetTitle": "Sobre",
+    "aboutDialogText": "Esta aplicação foi desenhada para facilitar o acesso a um imenso repositório de músicas Cristãs e acordes.\n\nDisponibilizado para si por"
+  },
+  "repoWidget": {
+    "noConnection": "Sem ligação à Internet!",
+    "searchPlaceholder": "Pesquisar uma música"
+  },
+  "sheetWidget": {
+    "zoom": "Zoom",
+    "saveAsPDF": "Guardar como PDF",
+    "copyToClipboard": "Letra copiada"
+  },
+  "settingsWidget": {
+    "widgetTitle": "Definições",
+    "appearanceSectionTitle": "Aparência",
+    "appThemeSettings": "Tema",
+    "optionFollowSystem": "Seguir definições de sistema",
+    "optionLight": "Claro",
+    "optionDark": "Escuro",
+    "languageSettings": "Linguagem",
+    "optionEnglish": "Inglês",
+    "optionPortuguese": "Português",
+    "basicsSectionTitle": "Básico",
+    "searchMethodSettings": "Pesquisar por",
+    "optionLyrics": "Letra",
+    "optionTitleLyrics": "Título e Letra",
+    "optionTitle": "Título",
+    "displaySectionTitle": "Ecrã",
+    "keepDisplayOnSettings": "Manter ecrã ligado",
+    "autoRotateSettings": "Rotação automática",
+    "optionPortrait": "Sempre em modo retrato",
+    "optionLandscape": "Sempre em modo paisagem"
+  }
+}

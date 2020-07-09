@@ -1,0 +1,40 @@
+{
+  "optionOk": "OK",
+  "optionCancel": "CANCEL",
+  "optionYes": "YES",
+  "optionNo": "NO",
+  "aboutWidget": {
+    "widgetTitle": "About",
+    "aboutDialogText": "This app was designed to ease the access to a huge repository of Christian songs and chords.\n\nProvided to you by"
+  },
+  "repoWidget": {
+    "noConnection": "No Internet connection!",
+    "searchPlaceholder": "Search a song"
+  },
+  "sheetWidget": {
+    "zoom": "Zoom",
+    "saveAsPDF": "Save as PDF",
+    "copyToClipboard": "Lyrics copied"
+  },
+  "settingsWidget": {
+    "widgetTitle": "Settings",
+    "appearanceSectionTitle": "Appearance",
+    "appThemeSettings": "App theme",
+    "optionFollowSystem": "Follow system settings",
+    "optionLight": "Light",
+    "optionDark": "Dark",
+    "languageSettings": "Language",
+    "optionEnglish": "English",
+    "optionPortuguese": "Portuguese",
+    "basicsSectionTitle": "Basics",
+    "searchMethodSettings": "Search by",
+    "optionLyrics": "Lyrics",
+    "optionTitleLyrics": "Title and Lyrics",
+    "optionTitle": "Title",
+    "displaySectionTitle": "Display",
+    "keepDisplayOnSettings": "Keep display on",
+    "autoRotateSettings": "Auto rotate",
+    "optionPortrait": "Always on portrait",
+    "optionLandscape": "Always on landscape"
+  }
+}
