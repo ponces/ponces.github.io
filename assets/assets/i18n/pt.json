@@ -5,7 +5,7 @@
   "optionNo": "NÃO",
   "aboutWidget": {
     "widgetTitle": "Sobre",
-    "aboutDialogText": "Esta aplicação foi desenhada para facilitar o acesso a um imenso repositório de músicas Cristãs e acordes.\n\nDisponibilizado para si por"
+    "aboutDialogText": "Esta aplicação foi desenhada para facilitar o acesso a um imenso repositório de letras e acordes de hinos e coros Cristãos.\n\nDisponibilizado para si por"
   },
   "repoWidget": {
     "noConnection": "Sem ligação à Internet!",
@@ -14,7 +14,11 @@
   "sheetWidget": {
     "zoom": "Zoom",
     "saveAsPDF": "Guardar como PDF",
-    "copyToClipboard": "Letra copiada"
+    "saveLyrics": "Letra",
+    "saveChords": "Cifra",
+    "saveScore": "Partitura",
+    "copyToClipboard": "Letra copiada",
+    "downloadComplete": "Transferência concluída"
   },
   "settingsWidget": {
     "widgetTitle": "Definições",
