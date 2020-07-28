@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#0CA940",
     "theme_color": "#0CA940",
-    "description": "Mobile Application to access a repository of Christian songs and chords.",
+    "description": "An easy way to access a repository of Christian songs and chords.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
