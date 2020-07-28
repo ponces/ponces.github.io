@@ -1,6 +1,6 @@
 {
-    "name": "hymnos",
-    "short_name": "hymnos",
+    "name": "Hymnos",
+    "short_name": "Hymnos",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0CA940",

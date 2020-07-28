@@ -64020,9 +64020,9 @@ r=r.y
 return X.anE(new P.K(s),a,M.aq1(q,l,n,o,m,C.eG,k,p,r),new P.K(s),"Inter",new P.K(s),new P.K(s),new P.K(s))},
 $S:410}
 M.aeb.prototype={
-$2:function(a,b){var s=null,r=4279019840,q=L.aI("hymnos",s,s,s,s,s,s,A.h2(s,s,new P.K(r),s,s,s,s,s,s,s,s,30,s,s,s,s,!0,s,s,s,s,s,s),s,s,s,s),p=M.aBe(s,s,new L.qz("assets/images/icon-512x512.png",s,s)),o=b.f
+$2:function(a,b){var s=null,r=4279019840,q=L.aI("Hymnos",s,s,s,s,s,s,A.h2(s,s,new P.K(r),s,s,s,s,s,s,s,s,30,s,s,s,s,!0,s,s,s,s,s,s),s,s,s,s),p=M.aBe(s,s,new L.qz("assets/images/icon-512x512.png",s,s)),o=b.f
 $.a_W=V.azF(E.azv("assets/i18n","en"),s)
-return new S.oV(new B.Aw(2,q,o,new K.zW(s),100,new P.K(r),new U.oI(p,s,s),s),"hymnos",b,H.a([new V.HN(),C.FZ,C.G3],t.Ez),s)},
+return new S.oV(new B.Aw(2,q,o,new K.zW(s),100,new P.K(r),new U.oI(p,s,s),s),"Hymnos",b,H.a([new V.HN(),C.FZ,C.G3],t.Ez),s)},
 $C:"$2",
 $R:2,
 $S:411}
@@ -64231,7 +64231,7 @@ $S:418}
 K.agK.prototype={
 $0:function(){var s=null,r=this.a
 K.cH(r,!1).cY()
-return A.aHA(M.bC(s,new U.oI(new L.qz("assets/images/icon-192x192.png",s,s),C.tm,s),s,s,s,s,65,s,s,s,s,65),"\xa9 2020 ponces","hymnos","1.0.0",H.a([new T.em(s,20,s,s),K.bD("aboutWidget.aboutDialogText",L.aI("",s,s,s,s,s,s,s,C.b_,s,s,s)),D.mb(s,L.aI("Alberto Ponces",s,s,s,s,s,s,A.h2(s,s,K.a6(r,!1).r,s,C.ki,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s),C.b_,s,s,s),C.X,!1,s,s,s,s,s,s,s,s,s,s,s,s,new K.agG(),s,s,s,s,s,s),D.mb(s,L.aI("ponces26@gmail.com",s,s,s,s,s,s,A.h2(s,s,K.a6(r,!1).r,s,C.ki,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s),C.b_,s,s,s),C.X,!1,s,s,s,s,s,s,s,s,s,s,s,s,new K.agH(),s,s,s,s,s,s)],t.t),r)},
+return A.aHA(M.bC(s,new U.oI(new L.qz("assets/images/icon-192x192.png",s,s),C.tm,s),s,s,s,s,65,s,s,s,s,65),"\xa9 2020 ponces","Hymnos","1.0.0",H.a([new T.em(s,20,s,s),K.bD("aboutWidget.aboutDialogText",L.aI("",s,s,s,s,s,s,s,C.b_,s,s,s)),D.mb(s,L.aI("Alberto Ponces",s,s,s,s,s,s,A.h2(s,s,K.a6(r,!1).r,s,C.ki,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s),C.b_,s,s,s),C.X,!1,s,s,s,s,s,s,s,s,s,s,s,s,new K.agG(),s,s,s,s,s,s),D.mb(s,L.aI("ponces26@gmail.com",s,s,s,s,s,s,A.h2(s,s,K.a6(r,!1).r,s,C.ki,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s),C.b_,s,s,s),C.X,!1,s,s,s,s,s,s,s,s,s,s,s,s,new K.agH(),s,s,s,s,s,s)],t.t),r)},
 $S:1}
 K.agG.prototype={
 $0:function(){return T.F_("https://github.com/ponces")},
