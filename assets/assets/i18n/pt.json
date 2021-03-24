@@ -16,9 +16,8 @@
     "saveAsPDF": "Guardar como PDF",
     "saveLyrics": "Letra",
     "saveChords": "Cifra",
-    "saveScore": "Partitura",
-    "copyToClipboard": "Letra copiada",
-    "downloadComplete": "Transferência concluída"
+    "saveSheet": "Partitura",
+    "copyToClipboard": "Letra copiada"
   },
   "settingsWidget": {
     "widgetTitle": "Definições",

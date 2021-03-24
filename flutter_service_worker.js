@@ -24,22 +24,22 @@ const RESOURCES = {
 "assets/assets/fonts/Inter-SemiBoldItalic.otf": "98c80f4fd037b4845f6083a68057cb0f",
 "assets/assets/fonts/Inter-Thin.otf": "7c82068d1ef6c091c54a5249ff32d771",
 "assets/assets/fonts/Inter-ThinItalic.otf": "71b0f6d26d3a911e4c4b0ddccc3fea76",
-"assets/assets/i18n/en.json": "1705f530312406268af89428b5bf3cf6",
-"assets/assets/i18n/pt.json": "67f9debb12963178f4ecc4b92649e09a",
+"assets/assets/i18n/en.json": "c3510bae4953992273ec39c9bda44a40",
+"assets/assets/i18n/pt.json": "1d0f29cf62b3e653f31091156e6dccd2",
 "assets/assets/images/icon-192x192.png": "ef7f1cfccf537f49c8059da4edf5b9a0",
 "assets/assets/images/icon-512x512-square.png": "a5c34741595dcb703f7dd4a75ad8cf54",
 "assets/assets/images/icon-512x512.png": "a75fa29931dcae08df6c2d2baf684c96",
 "assets/assets/images/icon-foreground-432x432.png": "60ae729f0f2b85ca8a4e00d024cd4efc",
-"assets/FontManifest.json": "3ae9c4f8251aa8e83ed7e1c472de1ba5",
-"assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/NOTICES": "3f77b64029587685eb0d8cd14b4c48bb",
-"assets/packages/line_icons/lib/assets/fonts/LineIcons.ttf": "cbbafe11733101c7a8e47d5e701ddba4",
+"assets/FontManifest.json": "40deab813c922dfb16e42e6ccbef4172",
+"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
+"assets/NOTICES": "4a2ee0a11724723ede7617eeea7af42a",
+"assets/packages/line_icons/lib/assets/fonts/LineIcons.ttf": "23621397bc1906a79180a918e98f35b2",
 "favicon.png": "7d671c258d13091fd08538757482bb90",
 "icons/Icon-192.png": "ef7f1cfccf537f49c8059da4edf5b9a0",
 "icons/Icon-512.png": "a75fa29931dcae08df6c2d2baf684c96",
-"index.html": "9937b571fee2a427a5170d4a90986a2d",
-"/": "9937b571fee2a427a5170d4a90986a2d",
-"main.dart.js": "0e40eb7f9e9589d6f070af462dd85692",
+"index.html": "d190660fb997523db30ef88dddc69320",
+"/": "d190660fb997523db30ef88dddc69320",
+"main.dart.js": "4e95eb7f49f195cc1a8b9b6bf6a0ccf5",
 "manifest.json": "604c49b29a5e8bceae107d1cc900be2b"
 };
 
@@ -52,13 +52,12 @@ const CORE = [
 "assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
-
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
-      // Provide a no-cache param to ensure the latest version is downloaded.
-      return cache.addAll(CORE.map((value) => new Request(value, {'cache': 'no-cache'})));
+      return cache.addAll(
+        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
     })
   );
 });
@@ -73,7 +72,6 @@ self.addEventListener("activate", function(event) {
       var tempCache = await caches.open(TEMP);
       var manifestCache = await caches.open(MANIFEST);
       var manifest = await manifestCache.match('manifest');
-
       // When there is no prior manifest, clear the entire cache.
       if (!manifest) {
         await caches.delete(CACHE_NAME);
@@ -87,7 +85,6 @@ self.addEventListener("activate", function(event) {
         await manifestCache.put('manifest', new Response(JSON.stringify(RESOURCES)));
         return;
       }
-
       var oldManifest = await manifest.json();
       var origin = self.location.origin;
       for (var request of await contentCache.keys()) {
@@ -128,21 +125,26 @@ self.addEventListener("fetch", (event) => {
   var origin = self.location.origin;
   var key = event.request.url.substring(origin.length + 1);
   // Redirect URLs to the index.html
-  if (event.request.url == origin || event.request.url.startsWith(origin + '/#')) {
+  if (key.indexOf('?v=') != -1) {
+    key = key.split('?v=')[0];
+  }
+  if (event.request.url == origin || event.request.url.startsWith(origin + '/#') || key == '') {
     key = '/';
   }
   // If the URL is not the RESOURCE list, skip the cache.
   if (!RESOURCES[key]) {
     return event.respondWith(fetch(event.request));
   }
+  // If the URL is the index.html, perform an online-first request.
+  if (key == '/') {
+    return onlineFirst(event);
+  }
   event.respondWith(caches.open(CACHE_NAME)
     .then((cache) =>  {
       return cache.match(event.request).then((response) => {
         // Either respond with the cached resource, or perform a fetch and
-        // lazily populate the cache. Ensure the resources are not cached
-        // by the browser for longer than the service worker expects.
-        var modifiedRequest = new Request(event.request, {'cache': 'no-cache'});
-        return response || fetch(modifiedRequest).then((response) => {
+        // lazily populate the cache.
+        return response || fetch(event.request).then((response) => {
           cache.put(event.request, response.clone());
           return response;
         });
@@ -157,7 +159,6 @@ self.addEventListener('message', (event) => {
   if (event.data === 'skipWaiting') {
     return self.skipWaiting();
   }
-
   if (event.message === 'downloadOffline') {
     downloadOffline();
   }
@@ -182,4 +183,26 @@ async function downloadOffline() {
     }
   }
   return contentCache.addAll(resources);
+}
+
+// Attempt to download the resource online before falling back to
+// the offline cache.
+function onlineFirst(event) {
+  return event.respondWith(
+    fetch(event.request).then((response) => {
+      return caches.open(CACHE_NAME).then((cache) => {
+        cache.put(event.request, response.clone());
+        return response;
+      });
+    }).catch((error) => {
+      return caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(event.request).then((response) => {
+          if (response != null) {
+            return response;
+          }
+          throw error;
+        });
+      });
+    })
+  );
 }

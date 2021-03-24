@@ -16,9 +16,8 @@
     "saveAsPDF": "Save as PDF",
     "saveLyrics": "Lyrics",
     "saveChords": "Chords",
-    "saveScore": "Score",
-    "copyToClipboard": "Lyrics copied",
-    "downloadComplete": "Download complete"
+    "saveSheet": "Sheet",
+    "copyToClipboard": "Lyrics copied"
   },
   "settingsWidget": {
     "widgetTitle": "Settings",
