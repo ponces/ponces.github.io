@@ -24,8 +24,8 @@ const RESOURCES = {
 "assets/assets/fonts/Inter-SemiBoldItalic.otf": "98c80f4fd037b4845f6083a68057cb0f",
 "assets/assets/fonts/Inter-Thin.otf": "7c82068d1ef6c091c54a5249ff32d771",
 "assets/assets/fonts/Inter-ThinItalic.otf": "71b0f6d26d3a911e4c4b0ddccc3fea76",
-"assets/assets/i18n/en.json": "c3510bae4953992273ec39c9bda44a40",
-"assets/assets/i18n/pt.json": "1d0f29cf62b3e653f31091156e6dccd2",
+"assets/assets/i18n/en.json": "91d4b56704225f1e0dfe93990c0dbe00",
+"assets/assets/i18n/pt.json": "5c1405b33f8df793220b5a7b2f0bc248",
 "assets/assets/images/icon-192x192.png": "ef7f1cfccf537f49c8059da4edf5b9a0",
 "assets/assets/images/icon-512x512-square.png": "a5c34741595dcb703f7dd4a75ad8cf54",
 "assets/assets/images/icon-512x512.png": "a75fa29931dcae08df6c2d2baf684c96",
@@ -37,9 +37,9 @@ const RESOURCES = {
 "favicon.png": "7d671c258d13091fd08538757482bb90",
 "icons/Icon-192.png": "ef7f1cfccf537f49c8059da4edf5b9a0",
 "icons/Icon-512.png": "a75fa29931dcae08df6c2d2baf684c96",
-"index.html": "053dea7f6b714b56ae021eea0ba3009b",
-"/": "053dea7f6b714b56ae021eea0ba3009b",
-"main.dart.js": "9bd189345e29d7186b85154b411d26a1",
+"index.html": "b35625b2fbd7aac6c7132b442ff93cb2",
+"/": "b35625b2fbd7aac6c7132b442ff93cb2",
+"main.dart.js": "bc5d838085e25bf0b796211d4185f961",
 "manifest.json": "604c49b29a5e8bceae107d1cc900be2b"
 };
 

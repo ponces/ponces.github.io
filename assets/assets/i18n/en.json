@@ -8,7 +8,6 @@
     "aboutDialogText": "This app was designed to ease the access to a huge lyrics and chords repository of Christian hymns and songs.\n\nProvided to you by"
   },
   "repoWidget": {
-    "noConnection": "No Internet connection!",
     "searchPlaceholder": "Search a song"
   },
   "sheetWidget": {
@@ -16,7 +15,7 @@
     "saveAsPDF": "Save as PDF",
     "saveLyrics": "Lyrics",
     "saveChords": "Chords",
-    "saveSheet": "Sheet",
+    "saveScores": "Scores",
     "copyToClipboard": "Lyrics copied"
   },
   "settingsWidget": {

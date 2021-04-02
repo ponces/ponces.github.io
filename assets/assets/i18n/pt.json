@@ -8,7 +8,6 @@
     "aboutDialogText": "Esta aplicação foi desenhada para facilitar o acesso a um imenso repositório de letras e acordes de hinos e coros Cristãos.\n\nDisponibilizado para si por"
   },
   "repoWidget": {
-    "noConnection": "Sem ligação à Internet!",
     "searchPlaceholder": "Pesquisar uma música"
   },
   "sheetWidget": {
@@ -16,7 +15,7 @@
     "saveAsPDF": "Guardar como PDF",
     "saveLyrics": "Letra",
     "saveChords": "Cifra",
-    "saveSheet": "Partitura",
+    "saveScores": "Partitura",
     "copyToClipboard": "Letra copiada"
   },
   "settingsWidget": {
