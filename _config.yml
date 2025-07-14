@@ -1,6 +1,6 @@
 # main text of home
 title: Alberto Ponces
-bio: Husband of Rita. Father of Luke. Fan of Android, Flutter and Linux.
+bio: Husband of Rita. Father of Luke and Simon. Fan of Android, Flutter and Linux.
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -36,7 +36,7 @@ disqus:
 # if you don't have any of social below, comment the line
 github: ponces
 linkedin: ponces
-twitter: ponces___
+twitter: ponces26
 telegram: ponces
 email: ponces26@gmail.com
 # facebook: myfacebook
@@ -45,10 +45,10 @@ email: ponces26@gmail.com
 authors:
   ponces:
     name: Alberto Ponces
-    bio: Husband of Rita. Father of Luke. Fan of Android, Flutter and Linux.
+    bio: Husband of Rita. Father of Luke and Simon. Fan of Android, Flutter and Linux.
     external-image: false
     picture: assets/images/profile.jpg
-    twitter: ponces___
+    twitter: ponces26
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
