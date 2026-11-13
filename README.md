@@ -1,3 +1,38 @@
+# ponces.dev
+
+Alberto Ponces’s personal site. Experience, projects, skills, education, and
+contact information live directly on the homepage—there is no downloadable CV.
+
+## Preview the new homepage
+
+Run `python3 -m http.server 4173` from this directory, then visit
+<http://localhost:4173>. No Node.js dependencies or build step are required.
+
+## Edit the site
+
+- `index.html`: content, social links, and search/social metadata.
+- `assets/site.css`: responsive layout, light/dark themes, and print styles.
+- `assets/site.js`: optional theme preference and current copyright year.
+- `assets/images/profile.jpg`: portrait.
+- `CNAME`: custom GitHub Pages domain; preserved as `ponces.dev`.
+
+The homepage is plain HTML without Jekyll front matter, so GitHub Pages copies
+it as-is. Existing Jekyll pages and theme files remain untouched for compatibility.
+The site follows the system color theme until the visitor makes a choice.
+Core content and navigation work without JavaScript. Fonts use Google Fonts
+with local system fallbacks.
+
+To publish, review the changes and push them to the repository’s `gh-pages`
+branch using the existing GitHub Pages setup. Removing the PDF stops serving it
+in future deployments; it does not remove copies from Git history or caches.
+
+---
+
+## Legacy theme documentation
+
+The following documentation belongs to the original Indigo theme, which is
+still used by the legacy Jekyll pages, not by the new homepage.
+
 <p align="center">
     <h2 align="center">Indigo Minimalist Jekyll Template - <a href="https://sergiokopplin.github.io/indigo/">Demo</a></h2>
 </p>
